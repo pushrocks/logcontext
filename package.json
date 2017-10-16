@@ -1,6 +1,6 @@
 {
   "name": "logcontext",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "log things contexts in async environments",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
