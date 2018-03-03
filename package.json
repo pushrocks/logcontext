@@ -1,7 +1,7 @@
 {
   "name": "logcontext",
-  "version": "1.0.3",
-  "description": "log things contexts in async environments",
+  "version": "1.0.18",
+  "description": "enrich logs with context",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": "Lossless GmbH",
@@ -10,9 +10,14 @@
     "test": "(npmts)"
   },
   "devDependencies": {
-    "tapbundle": "^1.0.13"
+    "@types/node": "^9.4.6",
+    "smartdelay": "^1.0.4",
+    "tapbundle": "^2.0.0"
   },
   "dependencies": {
-    "typings-global": "^1.0.16"
+    "@types/shortid": "^0.0.29",
+    "lik": "^2.0.5",
+    "shortid": "^2.2.8",
+    "smartcls": "^1.0.3"
   }
 }

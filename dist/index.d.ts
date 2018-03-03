@@ -1,1 +1,1 @@
-export declare let standardExport: string;
+export * from './logcontext.classes.logger';
