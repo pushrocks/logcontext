@@ -1,6 +1,6 @@
 {
   "name": "logcontext",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "enrich logs with context",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
