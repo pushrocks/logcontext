@@ -1,7 +1,16 @@
 {
+  "gitzone": {
+    "projectType": "npm",
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "logcontext",
+      "shortDescription": "enrich logs with context",
+      "npmPackagename": "@pushrocks/logcontext",
+      "license": "MIT"
+    }
+  },
   "npmci": {
-    "npmGlobalTools": [
-      "npmts"
-    ]
+    "npmGlobalTools": []
   }
 }

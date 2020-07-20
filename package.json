@@ -1,23 +1,45 @@
 {
-  "name": "logcontext",
+  "name": "@pushrocks/logcontext",
   "version": "1.0.22",
   "description": "enrich logs with context",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist_ts/index.js",
+  "typings": "dist_ts/index.d.ts",
   "author": "Lossless GmbH",
   "license": "MIT",
   "scripts": {
-    "test": "(npmts)"
+    "test": "(tstest test/)",
+    "build": "tsbuild"
   },
   "devDependencies": {
-    "@types/node": "^9.4.6",
-    "smartdelay": "^1.0.4",
-    "tapbundle": "^2.0.0"
+    "@gitzone/tsbuild": "^2.1.24",
+    "@gitzone/tsbundle": "^1.0.72",
+    "@gitzone/tstest": "^1.0.43",
+    "@pushrocks/smartdelay": "^2.0.10",
+    "@pushrocks/tapbundle": "^3.2.9",
+    "@types/node": "^14.0.23",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0"
   },
   "dependencies": {
-    "@types/shortid": "^0.0.29",
-    "lik": "^2.0.5",
-    "shortid": "^2.2.8",
-    "smartcls": "^1.0.4"
-  }
+    "@pushrocks/lik": "^4.0.17",
+    "@pushrocks/smartcls": "^1.0.9",
+    "@pushrocks/smartunique": "^3.0.3",
+    "@types/shortid": "0.0.29"
+  },
+  "private": false,
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "files": [
+    "ts/**/*",
+    "ts_web/**/*",
+    "dist/**/*",
+    "dist_*/**/*",
+    "dist_ts/**/*",
+    "dist_ts_web/**/*",
+    "assets/**/*",
+    "cli.js",
+    "npmextra.json",
+    "readme.md"
+  ]
 }

@@ -1,7 +1,13 @@
-import 'typings-global';
+// native scope
+import { AsyncLocalStorage } from 'async_hooks';
 
-import * as lik from 'lik';
-import * as smartcls from 'smartcls';
-import * as shortid from 'shortid';
+export {
+  AsyncLocalStorage
+};
 
-export { lik, smartcls, shortid };
+// pushrocks scope
+import * as lik from '@pushrocks/lik';
+import * as smartcls from '@pushrocks/smartcls';
+import * as smartunique from '@pushrocks/smartunique';
+
+export { lik, smartcls, smartunique };

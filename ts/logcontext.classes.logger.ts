@@ -3,7 +3,7 @@ import { LogMap } from './logcontext.classes.logmap';
 
 export class Logger {
   namespaceString: string;
-  clsNameSpace: plugins.smartcls.Namespace;
+  smartcls: plugins.smartcls.SmartCls;
   logmap: LogMap;
   thirdPartyLogger: any;
   child: any;
@@ -19,17 +19,17 @@ export class Logger {
     },
     disableAddData: () => {
       this.settingsParams.addData = false;
-    }
+    },
   };
   private settingsParams: { scope: boolean; addData: boolean } = {
     scope: true,
-    addData: true
+    addData: true,
   };
 
-  constructor(namespaceArg: string = plugins.shortid()) {
+  constructor(namespaceArg: string = plugins.smartunique.shortId()) {
     this.namespaceString = namespaceArg;
-    this.clsNameSpace = plugins.smartcls.createNamespace(this.namespaceString);
-    this.logmap = new LogMap(this.clsNameSpace);
+    this.smartcls = new plugins.smartcls.SmartCls();
+    this.logmap = new LogMap(this.smartcls);
   }
 
   addData(paramNameArg: string, dataArg: any) {
@@ -97,7 +97,7 @@ export class Logger {
   scope(funcArg: any) {
     // create node continuation scope
     if (this.settingsParams.scope) {
-      this.clsNameSpace.run(funcArg);
+      this.smartcls.run(funcArg);
     } else {
       funcArg();
     }
@@ -110,10 +110,10 @@ export class Logger {
    * @param {any[]} ...args
    */
   private routeLog(logMethod, message, ...args) {
-    let logObject = {
+    const logObject = {
       message: message,
       type: logMethod,
-      logContext: this.logmap.getAllData()
+      logContext: this.logmap.getAllData(),
     };
     if (this.thirdPartyLogger && this.thirdPartyLogger[logMethod]) {
       this.thirdPartyLogger[logMethod](logObject, ...args);
