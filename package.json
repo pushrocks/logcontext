@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/logcontext",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "enrich logs with context",
   "main": "dist_ts/index.js",
   "typings": "dist_ts/index.d.ts",
